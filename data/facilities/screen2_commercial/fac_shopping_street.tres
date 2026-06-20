@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://0r2c5bo7t8v2"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_8vrus"]
+
+[resource]
+script = ExtResource("1_8vrus")
+facility_id = "fac_shopping_street"
+facility_name = "商店街"
+type = 4
+metadata/_custom_type_script = "uid://whkyijs66ts6"

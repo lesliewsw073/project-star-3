@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "secretary"
+speaker_name = "小唯"
+text = "制作人，本週的週日會議開始了。右側可以調整下週行程，別忘了勾選要跟隨的藝人。"
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "secretary"
+speaker_name = "小唯"
+text = "若有藝人疲勞或壓力偏高，建議排一兩天休息。完成後按「結束週日會議」提交。"
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2")])
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_meeting_weekly_flavor_01"
+event_title = "週會開場"
+interaction_type = 3
+character_id = "secretary"
+execute_once = false
+arc_type = 9
+owner = "secretary"
+story_channel = 3
+meeting_scope = "weekly"
+dialogue = SubResource("dialogue")
+blocking = false
+result_text = "秘書簡短提醒了本週排程要點。"
+affection_delta = 1
+cooldown_days = 7
+required_flags = {"meeting.first_session_done": true}
+priority = 50

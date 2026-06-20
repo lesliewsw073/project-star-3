@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://bfhx2oq0g23ff"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_etv8n"]
+
+[resource]
+script = ExtResource("1_etv8n")
+facility_id = "fac_ad_02"
+facility_name = "光谱互动"
+type = 1
+linked_company_id = "comp_ad_02"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

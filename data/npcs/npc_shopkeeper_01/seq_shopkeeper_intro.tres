@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3 uid="uid://b5dmlv0kkftu"]
+
+[ext_resource type="Script" uid="uid://rdyjteq7b2gp" path="res://scripts/resources/dialogue_line.gd" id="1_end1y"]
+[ext_resource type="Script" uid="uid://438w10qba1kh" path="res://scripts/resources/dialogue_sequence.gd" id="2_ayi8a"]
+
+[sub_resource type="Resource" id="Resource_end1y"]
+script = ExtResource("1_end1y")
+speaker_name = "商店老板"
+text = "欢迎光临转角杂货铺！今天想买点什么？"
+metadata/_custom_type_script = "uid://rdyjteq7b2gp"
+
+[sub_resource type="Resource" id="Resource_ayi8a"]
+script = ExtResource("1_end1y")
+speaker_name = "商店老板"
+text = "看您的样子，最近是在忙着筹备新通告吧？随便挑，随便选。"
+metadata/_custom_type_script = "uid://rdyjteq7b2gp"
+
+[resource]
+script = ExtResource("2_ayi8a")
+lines = Array[ExtResource("1_end1y")]([SubResource("Resource_end1y"), SubResource("Resource_ayi8a")])
+metadata/_custom_type_script = "uid://438w10qba1kh"

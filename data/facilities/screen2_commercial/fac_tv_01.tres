@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://b01xixy2b464q"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_kh7h8"]
+
+[resource]
+script = ExtResource("1_kh7h8")
+facility_id = "fac_tv_01"
+facility_name = "草莓卫视"
+type = 1
+linked_company_id = "comp_tv_01"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

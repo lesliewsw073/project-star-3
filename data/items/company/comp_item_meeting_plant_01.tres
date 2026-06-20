@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ItemResource.gd" id="1"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1")
+item_id = "comp_item_meeting_plant_01"
+item_name = "會議室綠植"
+item_category = 0
+description = "會議室角落的綠植，讓來訪者覺得公司很有活力。"
+shop_price = 3000
+reputation_bonus = 50
+meeting_display_key = "meeting_plant_01"

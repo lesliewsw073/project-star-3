@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="ArtistResource" format=3 uid="uid://dmbw1ismltavq"]
+
+[ext_resource type="Script" path="res://scripts/resources/Artist_Resource.gd" id="1_artist"]
+[ext_resource type="Script" path="res://scripts/resources/ArtistProfileResource.gd" id="2_profile_script"]
+
+[sub_resource type="Resource" id="Resource_profile_001"]
+script = ExtResource("2_profile_script")
+age = 22
+height_cm = 168
+weight_kg = 52
+bust_cm = 86
+waist_cm = 58
+hip_cm = 88
+likes = "現實題材電影、深夜路跑、黑咖啡"
+dislikes = "無意義的社交、被當成花瓶"
+development_goal = "成為能挑大梁的實力派，不靠話題吃飯"
+
+[resource]
+is_test_content = true
+script = ExtResource("1_artist")
+artist_id = "artist_001"
+artist_name = "一号"
+gender = 1
+is_debuted = false
+opening_pick = true
+affection = 20
+character_profile = SubResource("Resource_profile_001")
+contract_diff_mod = -25
+fail_rate_abs = -10
+perfect_rate_abs = -10
+morality_mod = -20
+favor_gain_mod = 5
+stress_gain_mod = -1
+fatigue_gain_mod = -1
+satisfaction_gain_mod = 1
+metadata/_custom_type_script = "uid://ebocfftk3cwv"

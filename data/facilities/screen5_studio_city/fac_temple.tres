@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://2enpnpn0ron0"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_g3mo0"]
+
+[resource]
+script = ExtResource("1_g3mo0")
+facility_id = "fac_temple"
+facility_name = "隐山寺"
+type = 2
+metadata/_custom_type_script = "uid://whkyijs66ts6"

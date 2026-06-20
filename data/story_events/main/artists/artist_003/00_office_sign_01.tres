@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "请！...进...这次倒是比我们早上见面时还快啊，门都没等我开。"
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "artist_003"
+text = "下午好。主要是合同小唯刚拿去归档，我想赶快把事情定下来。这是我列的前三个月计划，你先过个目。"
+
+[sub_resource type="Resource" id="line_3"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "……效率够快的。不过，我看你签约金直接填了个零，认真的？新人进来不都得先咬死个价吗。"
+
+[sub_resource type="Resource" id="line_4"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "这很公平。那工作之外的呢？比如公司需要配合的日常宣发，或者聚餐什么的。"
+
+[sub_resource type="Resource" id="line_5"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "行吧，那至少晚上一起吃个便饭？小唯也会一起，顺便聊聊下周的主持通告。"
+
+[sub_resource type="Resource" id="line_6"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "不饿？你中午就吃了半个三明治吧？控体也别太过了。"
+
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2"), SubResource("line_3"), SubResource("line_4"), SubResource("line_5"), SubResource("line_6")])
+
+[resource]
+is_test_content = false
+script = ExtResource("1_event")
+event_id = "story_sign_artist_003_day1_office_01"
+event_title = "米语签约首日会面"
+interaction_type = 2
+character_id = "artist_003"
+execute_once = true
+arc_type = 1
+owner = "artist_003"
+story_channel = 1
+cg_id = "sign_knock_office"
+dialogue = SubResource("dialogue")
+blocking = true
+required_flags = {"opening_pick": "artist_003"}
+flag_changes = {"sign_artist_003_done": true}
+priority = 100

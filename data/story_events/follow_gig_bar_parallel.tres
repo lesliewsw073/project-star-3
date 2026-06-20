@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_follow_gig_bar_parallel"
+event_title = "雙人同台後台"
+interaction_type = 0
+trigger_context = 1
+trigger_mode = 1
+task_signature = "gig:gig_bar_singer_01"
+trigger_chance = 1.0
+priority = 20
+description = "兩位藝人同日同場駐唱，並列觸發後台劇情。"
+result_text = "兩人同台演出後，你們一起進了後台，場面難得熱鬧。"
+affection_delta = 2

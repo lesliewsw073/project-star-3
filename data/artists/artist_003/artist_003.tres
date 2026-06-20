@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="ArtistResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/Artist_Resource.gd" id="1_artist"]
+[ext_resource type="Script" path="res://scripts/resources/ArtistProfileResource.gd" id="2_profile_script"]
+
+[sub_resource type="Resource" id="Resource_profile_003"]
+script = ExtResource("2_profile_script")
+age = 22
+height_cm = 167
+weight_kg = 48
+bust_cm = 86
+waist_cm = 58
+hip_cm = 88
+likes = "舞蹈訓練、錄像復盤、家裡的爬寵"
+dislikes = "無效社交、亂七八糟的營業和緋聞"
+development_goal = "站上頂級舞台，成為無法被忽視的中心"
+
+[resource]
+is_test_content = false
+script = ExtResource("1_artist")
+artist_id = "artist_003"
+artist_name = "米语"
+gender = 1
+is_debuted = false
+opening_pick = true
+affection = 15
+character_profile = SubResource("Resource_profile_003")
+contract_diff_mod = 20
+fail_rate_abs = -5
+perfect_rate_abs = 15
+morality_mod = -15
+favor_gain_mod = 5
+stress_gain_mod = 1
+fatigue_gain_mod = 1
+satisfaction_gain_mod = 0

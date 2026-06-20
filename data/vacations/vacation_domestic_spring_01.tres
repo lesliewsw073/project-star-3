@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VacationResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/VacationResource.gd" id="1_vacation"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_vacation")
+vacation_id = "vacation_domestic_spring_01"
+vacation_name = "近郊溫泉療癒"
+vacation_type = 0
+cost_money = 6000
+add_fatigue = -28
+add_stress = -22
+add_satisfaction = 6

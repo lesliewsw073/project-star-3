@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://bee0ysf614p4d"]
+
+[ext_resource type="FontFile" uid="uid://b8n2c0q20ecvs" path="res://UI/STHeiti Light.ttc" id="1_ttu11"]
+
+[resource]
+default_font = ExtResource("1_ttu11")
+Button/fonts/font = ExtResource("1_ttu11")
+Label/fonts/font = ExtResource("1_ttu11")

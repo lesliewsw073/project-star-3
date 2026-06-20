@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://b7rugmp6gsk8s"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_6g4jj"]
+
+[resource]
+script = ExtResource("1_6g4jj")
+facility_id = "fac_tv_03"
+facility_name = "地心引力传媒"
+type = 1
+linked_company_id = "comp_tv_03"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

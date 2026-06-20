@@ -1,0 +1,72 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Project_Star_3"
+run/main_scene="res://GameRoot.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+TimeManager="*res://scripts/autoload/TimeManager.gd"
+ArtistManager="*uid://crgjr1qyveniy"
+RivalManager="*res://scripts/autoload/RivalManager.gd"
+NpcManager="*res://scripts/autoload/NpcManager.gd"
+ScheduleManager="*res://scripts/managers/ScheduleManager.gd"
+FollowPlanManager="*res://scripts/managers/FollowPlanManager.gd"
+PlayerManager="*uid://dr5bagpioo17l"
+ProtagonistManager="*res://scripts/autoload/ProtagonistManager.gd"
+DialogueVariableResolver="*res://scripts/autoload/DialogueVariableResolver.gd"
+RelationshipManager="*res://scripts/autoload/RelationshipManager.gd"
+CharacterDatabase="*res://scripts/autoload/CharacterDatabase.gd"
+InteractionManager="*res://scripts/autoload/InteractionManager.gd"
+StoryTriggerManager="*res://scripts/managers/StoryTriggerManager.gd"
+StoryPlaybackController="*res://scripts/managers/StoryPlaybackController.gd"
+CompanyDatabase="*uid://bwogr4yxelufc"
+AgencyDatabase="*res://scripts/autoload/AgencyDatabase.gd"
+JobManager="*res://scripts/autoload/JobManager.gd"
+CourseManager="*res://scripts/autoload/CourseManager.gd"
+GigManager="*res://scripts/autoload/GigManager.gd"
+SchedulePickerManager="*res://scripts/managers/SchedulePickerManager.gd"
+VacationManager="*res://scripts/autoload/VacationManager.gd"
+SecretaryManager="*uid://ue85r36g6iy4"
+ReporterManager="*res://scripts/autoload/ReporterManager.gd"
+AwardRegistry="*res://scripts/autoload/AwardRegistry.gd"
+NewsManager="*res://scripts/autoload/NewsManager.gd"
+CompanyEventManager="*res://scripts/autoload/CompanyEventManager.gd"
+GameFlowManager="*res://scripts/autoload/GameFlowManager.gd"
+InventoryManager="*res://scripts/managers/InventoryManager.gd"
+ItemDatabase="*res://scripts/autoload/ItemDatabase.gd"
+CompanyItemManager="*res://scripts/managers/CompanyItemManager.gd"
+PlayerHomeManager="*res://scripts/managers/PlayerHomeManager.gd"
+ItemManager="*res://scripts/managers/ItemManager.gd"
+SaveManager="*res://scripts/managers/SaveManager.gd"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/size/min_width=1280
+window/size/min_height=720
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

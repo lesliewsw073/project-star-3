@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NewsTemplateResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/NewsTemplateResource.gd" id="1_tpl"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_tpl")
+template_id = "test_filler_weather_01"
+title = "今日天氣"
+body = "本市今日多雲，氣溫適中。製作人外出時記得備傘。"
+category = 7
+importance = 0
+repeat_allowed = true

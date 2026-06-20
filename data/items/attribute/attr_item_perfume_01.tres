@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ItemResource.gd" id="1"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1")
+item_id = "attr_item_perfume_01"
+item_name = "精品香水"
+item_category = 1
+description = "提升口才與好感的小禮物。屬性已滿則不再增加。"
+shop_price = 800
+add_eloquence = 5
+add_affection = 3
+add_satisfaction = 2

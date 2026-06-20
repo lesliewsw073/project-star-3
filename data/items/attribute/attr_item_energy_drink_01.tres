@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ItemResource.gd" id="1"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1")
+item_id = "attr_item_energy_drink_01"
+item_name = "能量飲料"
+item_category = 1
+description = "緩解疲勞的機能飲料。只能送給已簽約藝人。"
+shop_price = 200
+add_fatigue = -15
+add_stress = -5

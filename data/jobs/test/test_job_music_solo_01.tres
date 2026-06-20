@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="JobResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/JobResource.gd" id="1_job"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_job")
+job_id = "test_job_music_solo_01"
+job_name = "星潮單曲錄製"
+job_class = 0
+job_type = 3
+target_company_id = "comp_music_01"
+total_days = 4
+required_shoot_days = 4
+shoot_window_weeks = 8
+shoot_cycle = 0
+shoot_days_per_week = 4
+start_day_index = 0
+required_personnel = 1
+req_singing = 5
+req_timbre = 0
+reward_money = 28000
+reward_fame = 35
+add_fatigue = 14
+add_stress = 10
+add_singing = 2
+unlock_location_id = "screen_2"
+unlock_facility_id = "fac_music_01"

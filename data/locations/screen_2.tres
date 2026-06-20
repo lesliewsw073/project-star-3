@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="LocationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/FacilityResource.gd" id="1_ww5n6"]
+[ext_resource type="Script" path="res://scripts/resources/LocationResource.gd" id="2_77ewp"]
+[ext_resource type="Resource" path="res://data/facilities/screen2_commercial/fac_tv_01.tres" id="2_h8wua"]
+[ext_resource type="Resource" path="res://data/facilities/screen2_commercial/fac_music_01.tres" id="3_m6udf"]
+[ext_resource type="Resource" path="res://data/facilities/screen2_commercial/fac_bar.tres" id="4_f0bak"]
+[ext_resource type="Resource" path="res://data/facilities/screen2_commercial/fac_mall.tres" id="5_us7lg"]
+[ext_resource type="Resource" path="res://data/facilities/screen2_commercial/fac_shopping_street.tres" id="6_ppih6"]
+
+[sub_resource type="Gradient" id="Gradient_h8wua"]
+colors = PackedColorArray(0.8901961, 0.2627451, 0.3882353, 1, 0.34509802, 0.031372547, 0.09411764, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m6udf"]
+gradient = SubResource("Gradient_h8wua")
+width = 1920
+height = 1080
+fill_to = Vector2(1, 1)
+
+[resource]
+script = ExtResource("2_77ewp")
+location_id = "screen_2"
+location_name = "流行商圈"
+background_texture = SubResource("GradientTexture2D_m6udf")
+facilities = Array[ExtResource("1_ww5n6")]([ExtResource("2_h8wua"), ExtResource("3_m6udf"), ExtResource("4_f0bak"), ExtResource("5_us7lg"), ExtResource("6_ppih6")])
+metadata/_custom_type_script = "uid://bnm2mp781j25u"

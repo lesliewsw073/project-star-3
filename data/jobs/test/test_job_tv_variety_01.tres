@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="JobResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/JobResource.gd" id="1_job"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_job")
+job_id = "test_job_tv_variety_01"
+job_name = "草莓衛視週末綜藝"
+job_class = 0
+job_type = 2
+target_company_id = "comp_tv_01"
+total_days = 3
+required_shoot_days = 3
+shoot_window_weeks = 8
+shoot_cycle = 0
+shoot_days_per_week = 3
+start_day_index = 0
+required_personnel = 1
+req_acting = 0
+req_singing = 0
+req_humor = 0
+reward_money = 18000
+reward_fame = 25
+add_fatigue = 12
+add_stress = 8
+add_satisfaction = 3
+unlock_location_id = "screen_2"
+unlock_facility_id = "fac_tv_01"

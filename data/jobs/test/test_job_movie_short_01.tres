@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="JobResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/JobResource.gd" id="1_job"]
+
+[resource]
+is_test_content = true
+is_major_job = true
+script = ExtResource("1_job")
+job_id = "test_job_movie_short_01"
+job_name = "穹宇映畫短片"
+job_class = 0
+job_type = 0
+target_company_id = "comp_film_01"
+invite_only = true
+total_days = 5
+required_shoot_days = 5
+shoot_window_weeks = 8
+shoot_cycle = 0
+shoot_days_per_week = 5
+start_day_index = 1
+required_personnel = 1
+req_acting = 50
+req_confidence = 40
+reward_money = 35000
+reward_fame = 40
+add_fatigue = 18
+add_stress = 12
+add_acting = 2
+unlock_location_id = "screen_3"
+unlock_facility_id = "fac_film_01"

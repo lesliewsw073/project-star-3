@@ -1,0 +1,37 @@
+---
+description: 預填／沙盒內容須標記為測試；僅米语（artist_003）人設劇本為正式稿
+alwaysApply: true
+---
+
+# 測試內容標記規範
+
+**硬性約定**：除勇者大人親自產出的 **米语（`artist_003`）人設與主線劇本** 外，目前專案內幾乎所有預填資料皆為 **測試／占位**，新增或修改時必須標記。
+
+## 三層標記
+
+| 層級 | 做法 |
+|------|------|
+| **資源欄位** | 在對應 `.tres` 設 `is_test_content = true`（正式稿設 `false`） |
+| **顯示名** | 玩家可見名稱保持遊戲內乾淨文案；不要只靠名稱標記測試狀態 |
+| **登記表** | 更新 `docs/writing/CONTENT_TIER_REGISTRY.md` |
+
+## id 與目錄
+
+- 純測試模板：`id` 以 `test_` 開頭，或放在 `data/**/test/` 目錄
+- 劇情事件占位：`event_id` 用 `test_` 或 `story_*` 占位稿；米线用 `story_*_artist_003_*`
+- 程式內測試事件／按鈕：函式名 `_test_*`、`event_id = "test_*"`；不要掛到正常玩家流程
+
+## 正式稿（`is_test_content = false`）
+
+- `data/artists/artist_003/`
+- `data/story_events/main/artist_003/*.tres`
+- `docs/writing/01_Characters/artist_003.md` 及米语相關劇本文稿
+- `data/npcs/secretary/`（小唯，邏輯角色）
+
+其餘藝人、對手、通告、打工、課程、道具、地圖設施、跟隨／探望占位劇本等 **預設為測試**。
+
+## AI 預填時
+
+1. 新增任何 `.tres`、占位數值、沙盒用門檻 → **同 PR 內** 設 `is_test_content = true`，並更新登記表
+2. 勿把测试数值當平衡定稿；註解寫「占位／待調」
+3. 替換為正式內容時：改 `is_test_content = false`、更新登記表

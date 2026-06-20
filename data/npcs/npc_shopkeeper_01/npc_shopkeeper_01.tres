@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3 uid="uid://di00d8f6qg0on"]
+
+[ext_resource type="Resource" uid="uid://b5dmlv0kkftu" path="res://data/npcs/npc_shopkeeper_01/seq_shopkeeper_intro.tres" id="1_52y77"]
+[ext_resource type="Script" uid="uid://dmeb31thx3yod" path="res://scripts/resources/NPCResource.gd" id="2_nk8oi"]
+
+[resource]
+is_test_content = true
+script = ExtResource("2_nk8oi")
+npc_id = "npc_shopkeeper_01"
+npc_name = "商店老板"
+type = 1
+home_facility_id = "fac_shop"
+default_dialogue = ExtResource("1_52y77")
+can_gain_affection = true
+default_affection = 10
+metadata/_custom_type_script = "uid://dmeb31thx3yod"

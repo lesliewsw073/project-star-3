@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "进来坐。今天是第一次周日例会——两件事：确认方向，排接下来怎么练。"
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "方向不变，还是 **舞台剧**。但前期不急着堆台词，也不急着接通告——你台上有光，台下容易收，这个落差要先处理。"
+
+[sub_resource type="Resource" id="line_3"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "近期重点两件事：**自信**，和 **仪态**。先把肩背站稳、走台定住，说话看人的习惯慢慢养——比一下子塞很多台词课更适合你。"
+
+[sub_resource type="Resource" id="line_4"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "没有。一对一，或者只加小唯在场记时间。公司刚起步，资源会先紧着你这一个艺人走——但练的是底子，不是赶场。"
+
+[sub_resource type="Resource" id="line_5"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "可以。那接下来，我们把下周的正式行程对一下——就从自信和仪态这两块排起。"
+
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2"), SubResource("line_3"), SubResource("line_4"), SubResource("line_5")])
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_meeting_artist_002_first_session_01"
+event_title = "周日迎新与第一次例会"
+interaction_type = 3
+character_id = "artist_002"
+execute_once = true
+arc_type = 1
+owner = "artist_002"
+story_channel = 3
+meeting_scope = "first"
+dialogue = SubResource("dialogue")
+blocking = true
+required_flags = {"opening_pick": "artist_002", "sign_artist_002_done": true}
+flag_changes = {"first_meeting_artist_002_done": true, "meeting.first_session_done": true}
+priority = 200

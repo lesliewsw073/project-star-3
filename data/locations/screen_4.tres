@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LocationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/FacilityResource.gd" id="1_yml1m"]
+[ext_resource type="Resource" path="res://data/facilities/screen4_cbd/fac_home.tres" id="2_t5mnc"]
+[ext_resource type="Script" path="res://scripts/resources/LocationResource.gd" id="2_vndtv"]
+[ext_resource type="Resource" path="res://data/facilities/screen4_cbd/fac_tv_02.tres" id="3_rd5lj"]
+[ext_resource type="Resource" path="res://data/facilities/screen4_cbd/fac_ad_03.tres" id="4_uvx64"]
+[ext_resource type="Resource" path="res://data/facilities/screen4_cbd/fac_hospital.tres" id="5_qvln1"]
+
+[sub_resource type="Gradient" id="Gradient_t5mnc"]
+colors = PackedColorArray(0.34431374, 0.6360785, 0.47294116, 1, 0.07215686, 0.21803921, 0.13647059, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rd5lj"]
+gradient = SubResource("Gradient_t5mnc")
+width = 1920
+height = 1080
+fill_to = Vector2(1, 1)
+
+[resource]
+script = ExtResource("2_vndtv")
+location_id = "screen_4"
+location_name = "核心 CBD"
+background_texture = SubResource("GradientTexture2D_rd5lj")
+facilities = Array[ExtResource("1_yml1m")]([ExtResource("2_t5mnc"), ExtResource("3_rd5lj"), ExtResource("4_uvx64"), ExtResource("5_qvln1")])
+metadata/_custom_type_script = "uid://bnm2mp781j25u"

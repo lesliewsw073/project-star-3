@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CourseResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/CourseResource.gd" id="1_course"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_course")
+course_id = "course_acting_basic_01"
+course_name = "影視表演基礎班"
+course_type = 0
+course_level = 0
+cost_money = 3000
+add_fatigue = 12
+add_stress = 8
+add_acting = 3
+add_confidence = 1
+unlock_location_id = "screen_3"
+unlock_facility_id = "fac_training_base"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NPCResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/NPCResource.gd" id="1_npc"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_npc")
+npc_id = "reporter_02"
+npc_name = "正面記者"
+type = 1
+can_gain_affection = false
+default_affection = 0

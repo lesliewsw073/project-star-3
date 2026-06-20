@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://jf602rkgi746"]
+
+[ext_resource type="Script" uid="uid://dmeb31thx3yod" path="res://scripts/resources/NPCResource.gd" id="1_i71pu"]
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_qocot"]
+[ext_resource type="Resource" uid="uid://di00d8f6qg0on" path="res://data/npcs/npc_shopkeeper_01/npc_shopkeeper_01.tres" id="2_6djgl"]
+
+[resource]
+script = ExtResource("1_qocot")
+facility_id = "fac_shop"
+facility_name = "便利商店"
+type = 2
+available_npcs = Array[ExtResource("1_i71pu")]([ExtResource("2_6djgl")])
+metadata/_custom_type_script = "uid://whkyijs66ts6"

@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "secretary"
+text = "小唯上次把合同条款讲得挺清楚的，我们来过几趟，该问的也都问过了。今天就不多打扰你们谈正事了——知秋交给你，我们放心。"
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "谢谢叔叔阿姨信任。放心交给我们。"
+
+[sub_resource type="Resource" id="line_3"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "好，就我们俩了。先说方向——公司签你，是朝 **原创歌曲艺人** 走的。英伦摇滚、你自己的词曲，这是核心，不会逼你去唱流水线流行歌。"
+
+[sub_resource type="Resource" id="line_4"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "可以。但丑话要说在前头——**前期不会一上来就堆通告**。你现在的唱功和舞台都还生，得先 **上课、练声、打基础**；也会安排一些 **非通告内容**，比如 small live、demo 录制、改词改曲，把底子垫厚。"
+
+[sub_resource type="Resource" id="line_5"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "（打断）\"放轻松点，我们还有很多时间可以梳理这些，以后这里就是你的基地了，先正式欢迎你加入我们，现在开始会议先吧。\""
+
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2"), SubResource("line_3"), SubResource("line_4"), SubResource("line_5")])
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_meeting_artist_001_first_session_01"
+event_title = "周日迎新与第一次例会"
+interaction_type = 3
+character_id = "artist_001"
+execute_once = true
+arc_type = 1
+owner = "artist_001"
+story_channel = 3
+meeting_scope = "first"
+dialogue = SubResource("dialogue")
+blocking = true
+required_flags = {"opening_pick": "artist_001", "sign_artist_001_done": true}
+flag_changes = {"first_meeting_artist_001_done": true, "meeting.first_session_done": true}
+priority = 200

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "欢迎，{player_address}。今日是为艺人备礼，还是您自己要用？"
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "先看看。"
+
+[sub_resource type="Resource" id="line_3"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "请便。高处的货，喊我一声便是——我不喜客人踮脚。"
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2"), SubResource("line_3")])
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_visit_npc_shopkeeper_01_enter_01"
+event_title = "进店招呼·01"
+interaction_type = 0
+character_id = "npc_shopkeeper_01"
+execute_once = false
+arc_type = 3
+owner = "npc_shopkeeper_01"
+participants = PackedStringArray("npc_shopkeeper_01", "protagonist")
+story_channel = 5
+dialogue = SubResource("dialogue")
+affection_settlement = 0
+cooldown_days = 0
+pool_id = "shop_enter"
+pool_weight = 1
+required_flags = {"shopkeeper_intro_done": true}
+location_id = "screen_1"
+facility_id = "fac_shop"
+priority = 100

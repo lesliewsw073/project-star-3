@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LocationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/FacilityResource.gd" id="1_7s5pu"]
+[ext_resource type="Resource" path="res://data/facilities/screen5_studio_city/fac_film_02.tres" id="2_c12kb"]
+[ext_resource type="Script" path="res://scripts/resources/LocationResource.gd" id="2_x4kbw"]
+[ext_resource type="Resource" path="res://data/facilities/screen5_studio_city/fac_tv_03.tres" id="3_uhaxl"]
+[ext_resource type="Resource" path="res://data/facilities/screen5_studio_city/fac_music_03.tres" id="4_3qa6q"]
+[ext_resource type="Resource" path="res://data/facilities/screen5_studio_city/fac_temple.tres" id="5_vbs7d"]
+
+[sub_resource type="Gradient" id="Gradient_c12kb"]
+colors = PackedColorArray(0.6611765, 0.5513725, 0.88705885, 1, 0.23058823, 0.17568627, 0.3435294, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uhaxl"]
+gradient = SubResource("Gradient_c12kb")
+width = 1920
+height = 1080
+fill_to = Vector2(1, 1)
+
+[resource]
+script = ExtResource("2_x4kbw")
+location_id = "screen_5"
+location_name = "近郊影视城"
+background_texture = SubResource("GradientTexture2D_uhaxl")
+facilities = Array[ExtResource("1_7s5pu")]([ExtResource("2_c12kb"), ExtResource("3_uhaxl"), ExtResource("4_3qa6q"), ExtResource("5_vbs7d")])
+metadata/_custom_type_script = "uid://bnm2mp781j25u"

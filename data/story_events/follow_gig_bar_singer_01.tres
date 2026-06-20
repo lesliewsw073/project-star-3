@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_follow_gig_bar_01"
+event_title = "酒吧駐唱後台"
+interaction_type = 0
+trigger_context = 1
+trigger_mode = 0
+task_signature = "gig:gig_bar_singer_01"
+trigger_chance = 1.0
+priority = 10
+description = "跟隨藝人完成酒吧駐唱後，在後台短暫交流。"
+result_text = "演出結束後，你們在後台聊了一會兒，氣氛還不錯。"
+affection_delta = 3

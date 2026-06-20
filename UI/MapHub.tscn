@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://c5dr6h0xearu6"]
+
+[ext_resource type="Script" uid="uid://bg64l8mhnbp7l" path="res://scripts/controllers/MapHubController.gd" id="1_78gjl"]
+[ext_resource type="Script" uid="uid://bnm2mp781j25u" path="res://scripts/resources/LocationResource.gd" id="2_gaxe3"]
+[ext_resource type="Resource" path="res://data/locations/screen_1.tres" id="3_wogj2"]
+[ext_resource type="Resource" path="res://data/locations/screen_2.tres" id="4_iivp0"]
+[ext_resource type="Resource" path="res://data/locations/screen_3.tres" id="5_3tkqf"]
+[ext_resource type="Resource" path="res://data/locations/screen_4.tres" id="6_dlwq6"]
+[ext_resource type="Resource" path="res://data/locations/screen_5.tres" id="7_boinq"]
+
+[node name="MapHub" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_78gjl")
+domestic_locations = Array[ExtResource("2_gaxe3")]([ExtResource("3_wogj2"), ExtResource("4_iivp0"), ExtResource("5_3tkqf"), ExtResource("6_dlwq6"), ExtResource("7_boinq")])
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="UI_Layer" type="CanvasLayer" parent="."]
+
+[node name="TopPanel" type="PanelContainer" parent="UI_Layer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 52.0
+grow_horizontal = 2
+
+[node name="TopBox" type="VBoxContainer" parent="UI_Layer/TopPanel"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TitleLabel" type="Label" parent="UI_Layer/TopPanel/TopBox"]
+layout_mode = 2
+text = "大地圖"
+horizontal_alignment = 1
+
+[node name="ScreenHintLabel" type="Label" parent="UI_Layer/TopPanel/TopBox"]
+layout_mode = 2
+text = "1 / 5"
+horizontal_alignment = 1
+
+[node name="NavLeft" type="Button" parent="UI_Layer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -16.0
+offset_right = 48.0
+offset_bottom = 16.0
+grow_vertical = 2
+text = "◀"
+
+[node name="NavRight" type="Button" parent="UI_Layer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -16.0
+offset_right = -12.0
+offset_bottom = 16.0
+grow_vertical = 2
+text = "▶"
+
+[node name="FacilityPanel" type="PanelContainer" parent="UI_Layer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -220.0
+offset_right = -12.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FacilityBox" type="VBoxContainer" parent="UI_Layer/FacilityPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="FacilityTitle" type="Label" parent="UI_Layer/FacilityPanel/FacilityBox"]
+layout_mode = 2
+text = "◆ 設施"
+horizontal_alignment = 1
+
+[node name="FacilityScroll" type="ScrollContainer" parent="UI_Layer/FacilityPanel/FacilityBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="FacilityContainer" type="VBoxContainer" parent="UI_Layer/FacilityPanel/FacilityBox/FacilityScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="FooterBar" type="HBoxContainer" parent="UI_Layer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -44.0
+offset_right = 300.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="BtnExitMap" type="Button" parent="UI_Layer/FooterBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "離開大地圖"
+
+[node name="BtnEndDay" type="Button" parent="UI_Layer/FooterBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "結束今日"
+
+[node name="WorldMapLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="DimBackground" type="ColorRect" parent="WorldMapLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.05, 0.08, 0.78)
+
+[node name="WorldPanel" type="PanelContainer" parent="WorldMapLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -160.0
+offset_right = 280.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorldVBox" type="VBoxContainer" parent="WorldMapLayer/WorldPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderBox" type="HBoxContainer" parent="WorldMapLayer/WorldPanel/WorldVBox"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="WorldMapLayer/WorldPanel/WorldVBox/HeaderBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "世界地圖"
+
+[node name="BtnClose" type="Button" parent="WorldMapLayer/WorldPanel/WorldVBox/HeaderBox"]
+layout_mode = 2
+text = "返回"
+
+[node name="CityContainer" type="VBoxContainer" parent="WorldMapLayer/WorldPanel/WorldVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ParisButton" type="Button" parent="WorldMapLayer/WorldPanel/WorldVBox/CityContainer"]
+layout_mode = 2
+text = "前往：巴黎（占位）"

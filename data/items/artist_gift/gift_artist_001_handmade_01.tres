@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ItemResource.gd" id="1"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1")
+item_id = "gift_artist_001_handmade_01"
+item_name = "手作小書籤"
+item_category = 3
+description = "001 在好感達標時送出的手作禮物，展示於玩家家中櫃子。"
+default_source_artist_id = "artist_001"
+home_display_slot = 1

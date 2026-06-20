@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "artist_001"
+text = "啊~你好啊！谢谢你听到最后！"
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "现在很少听到这么纯的英伦摇滚了，可是这几首我都没听过，是哪个乐队的作品？"
+
+[sub_resource type="Resource" id="line_3"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "……高中生能写出这种水平的作品？对摇滚的理解很通透，又有自己的风格。"
+
+[sub_resource type="Resource" id="line_4"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "\"这种复古风，市场接受度不算高。唱片公司还没回音的话……有兴趣来我公司试着发唱片吗？\""
+
+[sub_resource type="Resource" id="line_5"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "是啊，刚成立，虽然目前规模不大。但可以给你百分之百原创优先权。"
+
+[sub_resource type="Resource" id="line_6"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "嗯。不过你现在的唱功还很青涩，得加强训练。我今天能从你的歌里听出极大的热情，我愿意在你身上赌一把！"
+
+[sub_resource type="Resource" id="line_7"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "当然。这是我的名片，请收下，这种事一定要跟父母先商量的，那我希望有你的好消息。"
+
+[sub_resource type="Resource" id="line_8"]
+script = ExtResource("2_line")
+speaker_id = "artist_001"
+text = "嗯！那……叔叔再见！"
+
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2"), SubResource("line_3"), SubResource("line_4"), SubResource("line_5"), SubResource("line_6"), SubResource("line_7"), SubResource("line_8")])
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_sign_artist_001_street_01"
+event_title = "路边弹唱·签约"
+interaction_type = 2
+character_id = "artist_001"
+execute_once = true
+arc_type = 1
+owner = "artist_001"
+story_channel = 1
+dialogue = SubResource("dialogue")
+blocking = true
+required_flags = {"opening_pick": "artist_001"}
+flag_changes = {"sign_artist_001_done": true}
+priority = 100

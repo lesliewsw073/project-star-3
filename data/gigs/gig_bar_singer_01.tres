@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="GigResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/GigResource.gd" id="1_gig"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_gig")
+gig_id = "gig_bar_singer_01"
+gig_name = "酒吧駐唱"
+gig_type = 6
+reward_money = 1200
+penalty_threshold = 300
+add_fatigue = 14
+add_stress = 6
+add_satisfaction = -2
+add_singing = 2
+add_popularity = 1
+unlock_location_id = "screen_2"
+unlock_facility_id = "fac_bar"

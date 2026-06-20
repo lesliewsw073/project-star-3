@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "欢迎。第一次来？"
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "……这外面和里面，不太像同一家店。"
+
+[sub_resource type="Resource" id="line_3"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "街面留给风跟雨，里面留给用得着的东西。您若是 {company_name} 的 {protagonist_full_name}——我认得这张脸，新成立的经纪公司，在这条街上很醒目。"
+
+[sub_resource type="Resource" id="line_4"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "您怎么知道？"
+
+[sub_resource type="Resource" id="line_5"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "做这一行久了，谁起、谁落，耳朵比眼睛灵。叫我老欧就好。这铺子开了很多年；破产的经纪公司换了一茬又一茬，我这儿还在。"
+
+[sub_resource type="Resource" id="line_6"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "制作人常来吗？"
+
+[sub_resource type="Resource" id="line_7"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "常来。送礼、应急、给艺人补练声练舞的小玩意儿，稀奇一点的也有——您慢慢看，架上什么都有。价格写在标签上，我不口头加价。"
+
+[sub_resource type="Resource" id="line_8"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "闻得到几种香？别紧张，不是给您下咒。只是有些货，存放时需要那样。至于那一丁点硫磺气——"
+
+[sub_resource type="Resource" id="line_9"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "炼金术？"
+
+[sub_resource type="Resource" id="line_10"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "您比上一位老板有想象力。当成旧屋子的脾气就好。看中什么，喊我一声；不买也没关系——这行当已经够累了，不必进门还绷着。"
+
+[sub_resource type="Resource" id="line_11"]
+script = ExtResource("2_line")
+speaker_id = "npc_shopkeeper_01"
+text = "以后您就是老主顾了，{player_address}。铃铛响，就是招呼。"
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2"), SubResource("line_3"), SubResource("line_4"), SubResource("line_5"), SubResource("line_6"), SubResource("line_7"), SubResource("line_8"), SubResource("line_9"), SubResource("line_10"), SubResource("line_11")])
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_visit_npc_shopkeeper_01_intro_01"
+event_title = "商店·首次光临介绍"
+interaction_type = 0
+character_id = "npc_shopkeeper_01"
+execute_once = true
+arc_type = 1
+owner = "npc_shopkeeper_01"
+participants = PackedStringArray("npc_shopkeeper_01", "protagonist")
+story_channel = 5
+dialogue = SubResource("dialogue")
+blocking = true
+affection_settlement = 0
+flag_changes = {"shopkeeper_intro_done": true}
+location_id = "screen_1"
+facility_id = "fac_shop"
+priority = 300

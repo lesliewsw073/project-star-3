@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://bjgucqvqbcb17"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_rjg6i"]
+
+[resource]
+script = ExtResource("1_rjg6i")
+facility_id = "fac_art_gallery"
+facility_name = "美术馆"
+type = 4
+metadata/_custom_type_script = "uid://whkyijs66ts6"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://crchhq16lcfnr"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_188ll"]
+
+[resource]
+script = ExtResource("1_188ll")
+facility_id = "fac_music_02"
+facility_name = "幻音数字音乐"
+type = 1
+linked_company_id = "comp_music_02"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

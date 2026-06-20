@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ItemResource.gd" id="1"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1")
+item_id = "story_item_old_letter_01"
+item_name = "舊日信件"
+item_category = 2
+description = "劇情道具占位：需在特定事件中使用或贈送觸發劇情。"
+shop_price = 0
+story_use_event_id = "story_item_old_letter_use_01"
+gift_story_event_id = "story_item_old_letter_gift_01"

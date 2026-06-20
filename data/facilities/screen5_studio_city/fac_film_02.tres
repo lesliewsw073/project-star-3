@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://b0j5umguv8eq"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_g4j6y"]
+
+[resource]
+script = ExtResource("1_g4j6y")
+facility_id = "fac_film_02"
+facility_name = "极昼影业集团"
+type = 1
+linked_company_id = "comp_film_02"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://c4t4kgpxv64t3"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_uop6h"]
+
+[resource]
+script = ExtResource("1_uop6h")
+facility_id = "fac_training_base"
+facility_name = "训练基地"
+type = 3
+metadata/_custom_type_script = "uid://whkyijs66ts6"

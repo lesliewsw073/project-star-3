@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://ds3103ppett8w"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_nqgnp"]
+
+[resource]
+script = ExtResource("1_nqgnp")
+facility_id = "fac_agency"
+facility_name = "经纪公司"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

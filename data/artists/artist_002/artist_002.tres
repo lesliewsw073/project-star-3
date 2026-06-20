@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="ArtistResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/Artist_Resource.gd" id="1_artist"]
+[ext_resource type="Script" path="res://scripts/resources/ArtistProfileResource.gd" id="2_profile_script"]
+
+[sub_resource type="Resource" id="Resource_profile_002"]
+script = ExtResource("2_profile_script")
+age = 20
+height_cm = 162
+weight_kg = 47
+bust_cm = 84
+waist_cm = 56
+hip_cm = 86
+likes = "獨立音樂、手帳、安靜的咖啡館"
+dislikes = "大聲喧嘩、被催促表達"
+development_goal = "用作品說話，讓觀眾記住自己的聲音"
+
+[resource]
+is_test_content = true
+script = ExtResource("1_artist")
+artist_id = "artist_002"
+artist_name = "二号"
+gender = 1
+is_debuted = false
+opening_pick = true
+poachable_out = true
+affection = 25
+character_profile = SubResource("Resource_profile_002")
+contract_diff_mod = 20
+fail_rate_abs = 8
+perfect_rate_abs = 25
+morality_mod = 5
+favor_gain_mod = 10
+stress_gain_mod = 1
+fatigue_gain_mod = -1
+satisfaction_gain_mod = 1

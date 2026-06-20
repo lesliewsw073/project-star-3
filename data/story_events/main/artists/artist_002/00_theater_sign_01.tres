@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_line.gd" id="2_line"]
+[ext_resource type="Script" path="res://scripts/resources/dialogue_sequence.gd" id="3_seq"]
+
+[sub_resource type="Resource" id="line_1"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "\"不好意思，打扰一下——请问您是刚才台上那位琴师吗？我是前排的观众。刚刚看了你的表演，有件事想跟你聊一下。\""
+
+[sub_resource type="Resource" id="line_2"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "今晚这出戏我看过别的版本，主角很稳——但真正把我留住的，是第二幕您按着琴盒那一段。节目单上您的名字排在很后面，可我散场后反而一直在想那个画面。"
+
+[sub_resource type="Resource" id="line_3"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "那种专注不像临时拼出来的。我是 {company_name} 的 {protagonist_full_name}，偶尔也会来剧场看看人。方便告诉我怎么称呼您吗？"
+
+[sub_resource type="Resource" id="line_4"]
+script = ExtResource("2_line")
+speaker_id = "artist_002"
+text = "我叫贝尔……Valeria。中文我会说，就是……比较慢。试镜总是在镜头前失败……所以，平常很少有人会记得我。"
+
+[sub_resource type="Resource" id="line_5"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "镜头前失败，不代表舞台也不行——您刚才在灯底下，整个人是亮的。节目单写得很短，但我想问的是：您自己以后，想往哪条路走？"
+
+[sub_resource type="Resource" id="line_6"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "如果是舞台剧……{company_name} 也许能留一块地方给您——公司还小，但我愿意把古典剧目写进日程里。我带了份标准合同，不是要逼您今晚就定；您要是不急着走，可以先看看，签不签都随您。"
+
+[sub_resource type="Resource" id="line_7"]
+script = ExtResource("2_line")
+speaker_id = "protagonist"
+text = "当然。条款不急，你看完随时打给我。"
+
+
+[sub_resource type="Resource" id="dialogue"]
+script = ExtResource("3_seq")
+lines = Array[ExtResource("2_line")]([SubResource("line_1"), SubResource("line_2"), SubResource("line_3"), SubResource("line_4"), SubResource("line_5"), SubResource("line_6"), SubResource("line_7")])
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_sign_artist_002_theater_01"
+event_title = "剧院散场·递合同"
+interaction_type = 2
+character_id = "artist_002"
+execute_once = true
+arc_type = 1
+owner = "artist_002"
+story_channel = 1
+dialogue = SubResource("dialogue")
+blocking = true
+required_flags = {"opening_pick": "artist_002"}
+flag_changes = {"sign_artist_002_done": true}
+priority = 100

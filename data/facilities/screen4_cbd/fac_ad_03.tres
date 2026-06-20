@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://n72rjrthl0vn"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_4alii"]
+
+[resource]
+script = ExtResource("1_4alii")
+facility_id = "fac_ad_03"
+facility_name = "吴氏广告传媒"
+type = 1
+linked_company_id = "comp_ad_03"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

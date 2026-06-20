@@ -1,0 +1,30 @@
+---
+description: 桌面 docs 为项目全局唯一 spec 来源；改动须先更新桌面三份 master md
+alwaysApply: true
+---
+
+# 桌面 Master Spec（硬性）
+
+## 唯一真相来源
+
+全局掌控文档 **只有桌面路径**，不是 repo 内副本：
+
+| 文件 | 路径 |
+|------|------|
+| **总 spec** | `/Users/luke/Desktop/docs/项目梳理_明星志愿3精神续作.md` |
+| **剧本人设** | `/Users/luke/Desktop/docs/剧本人设写作规范.md` |
+| **图片规格** | `/Users/luke/Desktop/docs/图片规格与尺寸.md` |
+
+`project-star-3/docs/writing/` 为 Obsidian vault **镜像**，可含冗余 md；**以桌面三份为准**。
+
+## 改动流程
+
+1. 架构 / 剧情 / 资源 / 流程有任何定案或落地变更 → **先更新桌面总 spec**（必要时同步两份专项 md）。
+2. 再改代码、`data/`、vault 镜像。
+3. `PROJECT_PROGRESS.md` 仅作交接摘要，**不能替代**桌面总 spec。
+
+## AI 必读
+
+- 新对话应先知晓桌面总 spec 路径；用户称「精神续作 md」「总 spec」即指上述 Desktop 文件。
+- 勿把 `docs/writing/00_Project_Spec/obi更新版本.md` 当作最新源（可能滞后于桌面）。
+- 测试内容仍遵守 `CONTENT_TIER_REGISTRY.md` 与 workspace test-content 规则。

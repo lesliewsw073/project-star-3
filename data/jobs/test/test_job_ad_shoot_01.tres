@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="JobResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/JobResource.gd" id="1_job"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_job")
+job_id = "test_job_ad_shoot_01"
+job_name = "晨光飲品廣告"
+job_class = 0
+job_type = 6
+target_company_id = "comp_ad_01"
+total_days = 2
+required_shoot_days = 2
+shoot_window_weeks = 6
+shoot_cycle = 0
+shoot_days_per_week = 2
+start_day_index = 2
+required_personnel = 1
+req_deportment = 0
+req_fashion = 0
+reward_money = 22000
+reward_fame = 20
+add_fatigue = 10
+add_stress = 6
+add_exposure = 3
+unlock_location_id = "screen_1"
+unlock_facility_id = "fac_ad_01"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FacilityResource" format=3 uid="uid://b440jacfxrlu6"]
+
+[ext_resource type="Script" uid="uid://whkyijs66ts6" path="res://scripts/resources/FacilityResource.gd" id="1_cvqf8"]
+
+[resource]
+script = ExtResource("1_cvqf8")
+facility_id = "fac_ad_01"
+facility_name = "蓝图视觉"
+type = 1
+linked_company_id = "comp_ad_01"
+metadata/_custom_type_script = "uid://whkyijs66ts6"

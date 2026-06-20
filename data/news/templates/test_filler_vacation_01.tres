@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NewsTemplateResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/NewsTemplateResource.gd" id="1_tpl"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_tpl")
+template_id = "test_filler_vacation_01"
+title = "度假推薦"
+body = "春季國內短線度假路線升溫，業者推出藝能休養套餐。"
+category = 7
+importance = 0
+repeat_allowed = true
+month_min = 3
+month_max = 5

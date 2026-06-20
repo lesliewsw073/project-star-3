@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ItemResource.gd" id="1"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1")
+item_id = "comp_item_meeting_sofa_02"
+item_name = "會議室真皮沙發"
+item_category = 0
+description = "升級會議室沙發，來賓對公司的第一印象更好。"
+shop_price = 12000
+reputation_bonus = 100
+public_opinion_bonus = 20
+meeting_display_key = "meeting_sofa_02"

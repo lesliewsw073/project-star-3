@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_visit_bar_gig_01"
+event_title = "酒吧探望"
+interaction_type = 0
+trigger_context = 2
+trigger_mode = 0
+location_id = "screen_2"
+facility_id = "fac_bar"
+task_signature = "gig:gig_bar_singer_01"
+trigger_chance = 0.85
+priority = 10
+description = "藝人今日在酒吧駐唱，玩家前來探望。"
+result_text = "你在酒吧找到了正在準備演出的藝人，順便打了聲招呼。"
+affection_delta = 2

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="InteractionEventResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/InteractionEventResource.gd" id="1_event"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_event")
+event_id = "story_visit_tv_variety_01"
+event_title = "綜藝錄製探望"
+interaction_type = 0
+trigger_context = 2
+trigger_mode = 0
+location_id = "screen_2"
+facility_id = "fac_tv_01"
+task_signature = "job:test_job_tv_variety_01"
+trigger_chance = 0.9
+priority = 10
+description = "藝人今日在電視台錄製綜藝，玩家前來探班。"
+result_text = "你在錄影棚外等了一會，藝人出來透口氣時與你打了招呼。"
+affection_delta = 2

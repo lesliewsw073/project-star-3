@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="LocationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/FacilityResource.gd" id="1_dmll3"]
+[ext_resource type="Script" path="res://scripts/resources/LocationResource.gd" id="2_jcuiq"]
+[ext_resource type="Resource" path="res://data/facilities/screen3_art_zone/fac_film_01.tres" id="2_k3vkw"]
+[ext_resource type="Resource" path="res://data/facilities/screen3_art_zone/fac_music_02.tres" id="3_axkfn"]
+[ext_resource type="Resource" path="res://data/facilities/screen3_art_zone/fac_ad_02.tres" id="4_6h178"]
+[ext_resource type="Resource" path="res://data/facilities/screen3_art_zone/fac_art_gallery.tres" id="5_vrsxg"]
+[ext_resource type="Resource" path="res://data/facilities/screen3_art_zone/fac_training_base.tres" id="6_a25qy"]
+
+[sub_resource type="Gradient" id="Gradient_k3vkw"]
+colors = PackedColorArray(0.88392156, 0.7176471, 0.30039215, 1, 0.34196076, 0.2588235, 0.050196078, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_axkfn"]
+gradient = SubResource("Gradient_k3vkw")
+width = 1920
+height = 1080
+fill_to = Vector2(1, 1)
+
+[resource]
+script = ExtResource("2_jcuiq")
+location_id = "screen_3"
+location_name = "文创艺术园"
+background_texture = SubResource("GradientTexture2D_axkfn")
+facilities = Array[ExtResource("1_dmll3")]([ExtResource("2_k3vkw"), ExtResource("3_axkfn"), ExtResource("4_6h178"), ExtResource("5_vrsxg"), ExtResource("6_a25qy")])
+metadata/_custom_type_script = "uid://bnm2mp781j25u"

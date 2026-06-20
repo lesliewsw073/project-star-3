@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ArtistResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/Artist_Resource.gd" id="1_artist"]
+
+[resource]
+is_test_content = true
+script = ExtResource("1_artist")
+artist_id = "artist_006"
+artist_name = "六号"
+gender = 1
+is_debuted = true
+home_agency_id = "agency_002"
+poachable_in = true
+sibling_partner_id = "artist_005"
+affection = 10
+contract_diff_mod = 0
+fail_rate_abs = 0
+perfect_rate_abs = 0
+morality_mod = 0
+favor_gain_mod = 0
+stress_gain_mod = 0
+fatigue_gain_mod = 0
+satisfaction_gain_mod = 0

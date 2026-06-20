@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="LocationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/FacilityResource.gd" id="1_lbnp8"]
+[ext_resource type="Script" path="res://scripts/resources/LocationResource.gd" id="2_fi0qb"]
+[ext_resource type="Resource" path="res://data/facilities/screen1_aero_metropolis/fac_agency.tres" id="2_jsrwm"]
+[ext_resource type="Resource" path="res://data/facilities/screen1_aero_metropolis/fac_ad_01.tres" id="3_sp7tq"]
+[ext_resource type="Resource" path="res://data/facilities/screen1_aero_metropolis/fac_shop.tres" id="4_hupuc"]
+[ext_resource type="Resource" path="res://data/facilities/screen1_aero_metropolis/fac_park.tres" id="5_85t4c"]
+[ext_resource type="Resource" path="res://data/facilities/screen1_aero_metropolis/fac_airport.tres" id="6_bat45"]
+
+[sub_resource type="Gradient" id="Gradient_jsrwm"]
+colors = PackedColorArray(0.2, 0.7992157, 1, 1, 0, 0.29960784, 0.39999998, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sp7tq"]
+gradient = SubResource("Gradient_jsrwm")
+width = 1920
+height = 1080
+fill_to = Vector2(1, 1)
+
+[resource]
+script = ExtResource("2_fi0qb")
+location_id = "screen_1"
+location_name = "临空都会"
+background_texture = SubResource("GradientTexture2D_sp7tq")
+facilities = Array[ExtResource("1_lbnp8")]([ExtResource("2_jsrwm"), ExtResource("3_sp7tq"), ExtResource("4_hupuc"), ExtResource("5_85t4c"), ExtResource("6_bat45")])
+metadata/_custom_type_script = "uid://bnm2mp781j25u"

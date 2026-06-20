@@ -1,0 +1,36 @@
+# Godot 4+ generated/import cache
+.godot/
+
+# Export/build outputs
+/android/
+/builds/
+/exports/
+*.apk
+*.aab
+*.dmg
+*.exe
+*.pck
+*.zip
+
+# Local OS/editor noise
+.DS_Store
+**/.DS_Store
+*.swp
+*.tmp
+
+# Python/local tool environments
+__pycache__/
+*.py[cod]
+.venv/
+tools/image_tools/.venv/
+
+# Large local tools/installers. Keep scripts and docs, skip bundled apps.
+tools/LibreSprite/LibreSprite.app/
+tools/LibreSprite/*.dmg
+tools/LibreSprite/*.zip
+
+# Generated debug bundle; regenerate with tools/generate_full_codebase_md.py.
+docs/FULL_CODEBASE.md
+
+# Godot export presets may contain local credentials.
+export_presets.cfg
